@@ -36,9 +36,9 @@ const escapeHtml = (unsafe) => {
 };
 
 const salin = (btn) => {
-    navigator.clipboard.writeText(btn.getAttribute('data-nomer'));
+    navigator.clipboard.writeText(btn.getAttribute('data-copy'));
     let tmp = btn.innerHTML;
-    btn.innerHTML = 'Tersalin';
+    btn.innerHTML = 'Copied';
     btn.disabled = true;
 
     setTimeout(() => {
@@ -637,7 +637,7 @@ window.addEventListener('load', () => {
         <h2 class="text-light">${escapeHtml(name)}</h2>
         `;
 
-        document.getElementById('formnama').value = name;
+        //document.getElementById('formnama').value = name;
         document.getElementById('namatamu').appendChild(div);
     }
 
