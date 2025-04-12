@@ -638,6 +638,7 @@ window.addEventListener('load', () => {
         `;
 
         //document.getElementById('formnama').value = name;
+        document.getElementById("mymetatag").setAttribute("content", "Undangan untuk ${escapeHtml(name). Silahkan klik link ini untuk membuka detail undangan.");
         document.getElementById('namatamu').appendChild(div);
     }
 
