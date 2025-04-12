@@ -626,7 +626,7 @@ const modalFoto = (btn) => {
 window.addEventListener('load', () => {
     let modal = new bootstrap.Modal('#exampleModal');
     let name = (new URLSearchParams(window.location.search)).get('to') ?? '';
-
+    document.getElementById("mymetatag").setAttribute("content", "Undangan untuk ${escapeHtml(name). Silahkan klik link ini untuk membuka detail undangan.");
     if (name.length == 0) {
         document.getElementById('namatamu').remove();
     } else {
@@ -638,7 +638,6 @@ window.addEventListener('load', () => {
         `;
 
         //document.getElementById('formnama').value = name;
-        document.getElementById("mymetatag").setAttribute("content", "Undangan untuk ${escapeHtml(name). Silahkan klik link ini untuk membuka detail undangan.");
         document.getElementById('namatamu').appendChild(div);
     }
 
